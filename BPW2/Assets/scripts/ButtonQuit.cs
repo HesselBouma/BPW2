@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ButtonQuit : MonoBehaviour
 {
@@ -9,9 +10,10 @@ public class ButtonQuit : MonoBehaviour
 
        void OnTriggerEnter(Collider col)
         {
-        Application.Quit();
-
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
+}
 
-    }
+
+    
